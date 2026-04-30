@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FiBookOpen } from "react-icons/fi";
+import { FiBookOpen, FiLogIn, FiLogOut, FiUser } from "react-icons/fi";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -13,8 +13,9 @@ const Navbar = () => {
     { label: "My Profile", path: "/profile" },
   ];
 
-  // ✅ Active checker function
   const isActive = (path) => pathname === path;
+
+  const user = true;
 
   return (
     <div className="bg-base-100 shadow-sm">
@@ -90,7 +91,20 @@ const Navbar = () => {
 
         {/* RIGHT */}
         <div className="navbar-end">
-          <button className="btn btn-primary">Button</button>
+          {user ? (
+            <>
+              <div className="badge badge-soft py-4 px-4 text-black font-semibold mr-2">
+                <FiUser /> Sohel Rana
+              </div>
+              <button className="btn ">
+                <FiLogOut /> Logout
+              </button>
+            </>
+          ) : (
+            <button className="btn btn-primary">
+              <FiLogIn /> Login
+            </button>
+          )}
         </div>
       </div>
     </div>
