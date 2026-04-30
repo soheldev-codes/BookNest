@@ -18,8 +18,8 @@ const Navbar = () => {
   const user = true;
 
   return (
-    <div className="bg-base-100 shadow-sm">
-      <div className="navbar container mx-auto sticky top-0 z-50">
+    <div className="bg-base-100 shadow-sm sticky top-0 z-50">
+      <div className="navbar container mx-auto ">
         {/* LEFT */}
         <div className="navbar-start">
           {/* Mobile Menu */}
