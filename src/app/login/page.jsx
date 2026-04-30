@@ -5,14 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import {
-  FaUser,
-  FaEnvelope,
-  FaLock,
-  FaImage,
-  FaEye,
-  FaEyeSlash,
-} from "react-icons/fa";
+import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function SignupPage() {
   const {
@@ -35,6 +28,8 @@ export default function SignupPage() {
       callbackURL: "/",
     });
 
+    console.log(error);
+
     if (res) {
       toast.success("Welcome back!");
     }
@@ -44,9 +39,7 @@ export default function SignupPage() {
     <div className="min-h-screen flex items-center justify-center  p-4">
       <div className="card w-full max-w-md bg-base-100 shadow-2xl">
         <div className="card-body">
-          <h2 className="text-3xl font-bold text-center mb-6">
-            Create Account 🚀
-          </h2>
+          <h2 className="text-3xl font-bold text-center mb-6">Login Now 🚀</h2>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             {/* Email */}

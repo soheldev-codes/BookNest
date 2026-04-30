@@ -7,7 +7,7 @@ const Navlinks = () => {
 
   const navLinks = [
     { label: "Home", path: "/" },
-    { label: "All Books", path: "/books" },
+    { label: "All Books", path: "/all-books" },
     { label: "My Profile", path: "/profile" },
   ];
 

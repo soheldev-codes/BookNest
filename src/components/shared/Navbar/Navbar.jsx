@@ -7,12 +7,9 @@ import Logout from "./Logout";
 
 const Navbar = async () => {
   const session = await auth.api.getSession({
-    headers: await headers(), // you need to pass the headers object.
+    headers: await headers(),
   });
-  // console.log(session.user, "test");
   const user = session?.user;
-
-  console.log(user, "users navbar");
 
   return (
     <div className="bg-base-100 shadow-sm sticky top-0 z-50">

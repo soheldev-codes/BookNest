@@ -5,14 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import {
-  FaUser,
-  FaEnvelope,
-  FaLock,
-  FaImage,
-  FaEye,
-  FaEyeSlash,
-} from "react-icons/fa";
+import { FaUser, FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function SignupPage() {
   const {
@@ -34,11 +27,15 @@ export default function SignupPage() {
       password,
       name,
       image,
-      callbackURL: "/",
+      callbackURL: "/login",
     });
 
     if (res) {
       toast.success("Account created successfully 🎉");
+
+      await authClient.signOut();
+
+      toast.success("login now");
     } else {
       toast.error(error);
     }
