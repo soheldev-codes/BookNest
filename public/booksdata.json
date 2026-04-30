@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "JavaScript Essentials",
+    "author": "Kyle Simpson",
+    "description": "A beginner-friendly guide to understanding core JavaScript concepts.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://i.ibb.co.com/67bsYHrG/javascript-essentials.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "Best practices for writing clean and maintainable code.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://i.ibb.co.com/JRkZ0rvr/Clean-Code.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "description": "Tips and practices for becoming a better software developer.",
+    "category": "Tech",
+    "available_quantity": 3,
+    "image_url": "https://i.ibb.co.com/5t2WZhs/The-Pragmatic-Programmer.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A magical story about following your dreams and destiny.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://i.ibb.co.com/jvnHCfP7/The-Alchemist.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "description": "A young wizard’s journey begins in a magical world.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
+  },
+  {
+    "id": 6,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "A fantasy adventure of Bilbo Baggins in Middle-earth.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1519681393784-d120267933ba"
+  },
+  {
+    "id": 7,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "An exploration of cosmology and the universe.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765"
+  },
+  {
+    "id": 8,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "A gene-centered view of evolution.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://images.unsplash.com/photo-1553729459-efe14ef6055d"
+  },
+  {
+    "id": 9,
+    "title": "The Origin of Species",
+    "author": "Charles Darwin",
+    "description": "Foundation of evolutionary biology theory.",
+    "category": "Science",
+    "available_quantity": 2,
+    "image_url": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da"
+  },
+  {
+    "id": 10,
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "description": "Deep dive into JavaScript fundamentals and advanced topics.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://images.unsplash.com/photo-1512820790803-83ca734da794"
+  },
+  {
+    "id": 11,
+    "title": "The Time Machine",
+    "author": "H.G. Wells",
+    "description": "A science fiction novel about time travel adventures.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+  },
+  {
+    "id": 12,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "A journey through space, time, and the universe.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1496104679561-38b4f1d6c9c2"
+  }
+]

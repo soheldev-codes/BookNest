@@ -65,22 +65,22 @@ const Banner = () => {
           >
             <div className="relative">
               <div className="w-80 h-[420px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 rotate-3 hover:rotate-0 transition-transform duration-500">
-                {/* <Image
+                <Image
                   src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80"
                   alt="Books"
                   className="w-full h-full object-cover"
                   width={300}
                   height={300}
-                /> */}
+                />
               </div>
               <div className="absolute -bottom-6 -left-6 w-48 h-64 rounded-xl overflow-hidden shadow-xl -rotate-6 hover:rotate-0 transition-transform duration-500">
-                {/* <Image
+                <Image
                   src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80"
                   alt="Reading"
                   className="w-full h-full object-cover"
                   width={300}
                   height={300}
-                /> */}
+                />
               </div>
             </div>
           </motion.div>
