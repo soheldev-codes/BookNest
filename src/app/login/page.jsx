@@ -24,23 +24,19 @@ export default function SignupPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = async (data) => {
-    const name = data.name;
-    const image = data.image;
     const email = data.email;
     const password = data.password;
 
-    const { data: res, error } = await authClient.signUp.email({
+    console.log(data);
+
+    const { data: res, error } = await authClient.signIn.email({
       email,
       password,
-      name,
-      image,
       callbackURL: "/",
     });
 
     if (res) {
-      toast.success("Account created successfully 🎉");
-    } else {
-      toast.error(error);
+      toast.success("Welcome back!");
     }
   };
 
@@ -53,25 +49,6 @@ export default function SignupPage() {
           </h2>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            {/* Name */}
-            <div className="form-control">
-              <label className="label">Name</label>
-              <div className="relative">
-                <FaUser className="absolute left-3 top-3 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="input input-bordered w-full pl-10"
-                  {...register("name", { required: "Name is required" })}
-                />
-              </div>
-              {errors.name && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.name.message}
-                </p>
-              )}
-            </div>
-
             {/* Email */}
             <div className="form-control">
               <label className="label">Email</label>
@@ -128,40 +105,19 @@ export default function SignupPage() {
               )}
             </div>
 
-            {/* Image Upload */}
-            <div className="form-control">
-              <label className="label">Image URL</label>
-              <div className="relative">
-                <FaUser className="absolute left-3 top-3 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Your profile image link here"
-                  className="input input-bordered w-full pl-10"
-                  {...register("image", {
-                    required: "Your prfile image required",
-                  })}
-                />
-              </div>
-              {errors.image && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.image.message}
-                </p>
-              )}
-            </div>
-
             {/* Button */}
             <button type="submit" className="btn btn-primary w-full mt-4">
-              Sign Up
+              Sign In
             </button>
           </form>
 
           <p className="text-center mt-4 text-sm">
-            Already have an account?{" "}
+            Do not have an account?
             <Link
-              href="/login"
+              href="/signup"
               className="text-primary cursor-pointer hover:underline"
             >
-              Login
+              Sign up
             </Link>
           </p>
         </div>

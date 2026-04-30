@@ -3,13 +3,14 @@ import Navlinks from "./Navlinks";
 import Link from "next/link";
 import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
+import Logout from "./Logout";
 
 const Navbar = async () => {
   const session = await auth.api.getSession({
     headers: await headers(), // you need to pass the headers object.
   });
-  console.log(session.user, "test");
-  const user = session.user;
+  // console.log(session.user, "test");
+  const user = session?.user;
 
   console.log(user, "users navbar");
 
@@ -65,20 +66,7 @@ const Navbar = async () => {
 
         {/* RIGHT */}
         <div className="navbar-end">
-          {user ? (
-            <>
-              <div className="badge badge-soft py-4 px-4 text-black font-semibold mr-2">
-                <FiUser /> {user?.name}
-              </div>
-              <button className="btn ">
-                <FiLogOut /> Logout
-              </button>
-            </>
-          ) : (
-            <button className="btn btn-primary">
-              <FiLogIn /> Login
-            </button>
-          )}
+          <Logout />
         </div>
       </div>
     </div>
