@@ -1,21 +1,17 @@
-"use client";
-
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { FiBookOpen, FiLogIn, FiLogOut, FiUser } from "react-icons/fi";
+import Navlinks from "./Navlinks";
+import Link from "next/link";
+import { headers } from "next/headers";
+import { auth } from "@/lib/auth";
 
-const Navbar = () => {
-  const pathname = usePathname();
+const Navbar = async () => {
+  const session = await auth.api.getSession({
+    headers: await headers(), // you need to pass the headers object.
+  });
+  console.log(session.user, "test");
+  const user = session.user;
 
-  const navLinks = [
-    { label: "Home", path: "/" },
-    { label: "All Books", path: "/books" },
-    { label: "My Profile", path: "/profile" },
-  ];
-
-  const isActive = (path) => pathname === path;
-
-  const user = true;
+  console.log(user, "users navbar");
 
   return (
     <div className="bg-base-100 shadow-sm sticky top-0 z-50">
@@ -45,18 +41,7 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
             >
-              {navLinks.map((link) => (
-                <li key={link.path}>
-                  <Link
-                    href={link.path}
-                    className={`font-semibold text-black ${
-                      isActive(link.path) ? "bg-[#643CDD] text-white" : ""
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              <Navlinks />
             </ul>
           </div>
 
@@ -74,18 +59,7 @@ const Navbar = () => {
         {/* CENTER (Desktop Menu) */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-2 space-x-2">
-            {navLinks.map((link) => (
-              <li key={link.path}>
-                <Link
-                  href={link.path}
-                  className={`font-semibold text-black ${
-                    isActive(link.path) ? "bg-[#643CDD] text-white" : ""
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            <Navlinks />
           </ul>
         </div>
 
@@ -94,7 +68,7 @@ const Navbar = () => {
           {user ? (
             <>
               <div className="badge badge-soft py-4 px-4 text-black font-semibold mr-2">
-                <FiUser /> Sohel Rana
+                <FiUser /> {user?.name}
               </div>
               <button className="btn ">
                 <FiLogOut /> Logout
