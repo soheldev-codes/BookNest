@@ -42,7 +42,7 @@
     "description": "A young wizard’s journey begins in a magical world.",
     "category": "Story",
     "available_quantity": 7,
-    "image_url": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
+    "image_url": "https://i.ibb.co.com/3m6rp9br/Harry-Potter.jpg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "description": "A fantasy adventure of Bilbo Baggins in Middle-earth.",
     "category": "Story",
     "available_quantity": 5,
-    "image_url": "https://images.unsplash.com/photo-1519681393784-d120267933ba"
+    "image_url": "https://i.ibb.co.com/Q75TGPfv/The-Hobbit.jpg"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "description": "An exploration of cosmology and the universe.",
     "category": "Science",
     "available_quantity": 4,
-    "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765"
+    "image_url": "https://i.ibb.co.com/GQNTNLLm/ABrief-Historyof-Time.jpg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "A gene-centered view of evolution.",
     "category": "Science",
     "available_quantity": 3,
-    "image_url": "https://images.unsplash.com/photo-1553729459-efe14ef6055d"
+    "image_url": "https://i.ibb.co.com/sz7Tk20/The-Selfish-Gene.jpg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "Foundation of evolutionary biology theory.",
     "category": "Science",
     "available_quantity": 2,
-    "image_url": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da"
+    "image_url": "https://i.ibb.co.com/dJxdvFnr/The-Originof-Species.jpg"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "Deep dive into JavaScript fundamentals and advanced topics.",
     "category": "Tech",
     "available_quantity": 6,
-    "image_url": "https://images.unsplash.com/photo-1512820790803-83ca734da794"
+    "image_url": "https://i.ibb.co.com/0jYc3nbF/You-Don-t-Know-JS.jpg"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "description": "A science fiction novel about time travel adventures.",
     "category": "Story",
     "available_quantity": 4,
-    "image_url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+    "image_url": "https://i.ibb.co.com/8422mwXh/The-Time-Machine.jpg"
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "description": "A journey through space, time, and the universe.",
     "category": "Science",
     "available_quantity": 5,
-    "image_url": "https://images.unsplash.com/photo-1496104679561-38b4f1d6c9c2"
+    "image_url": "https://i.ibb.co.com/5ggw3wxK/Cosmos.jpg"
   }
 ]
