@@ -1,7 +1,5 @@
-import React from "react";
-
-const page = () => {
+const bookDetailsPage = async () => {
   return <div>books details</div>;
 };
 
-export default page;
+export default bookDetailsPage;

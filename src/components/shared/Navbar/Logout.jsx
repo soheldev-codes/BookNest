@@ -1,15 +1,18 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 import toast from "react-hot-toast";
 import { FiLogIn, FiLogOut, FiUser } from "react-icons/fi";
 
 const Logout = () => {
+  const router = useRouter();
+
   const logout = async () => {
     await authClient.signOut();
-
     toast.success("Logged out successfully");
+    router.push("/");
   };
 
   const {

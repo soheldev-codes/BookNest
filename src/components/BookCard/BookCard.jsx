@@ -1,17 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BsArrowRight } from "react-icons/bs";
-import { FaBookOpen } from "react-icons/fa";
 import { FiBookOpen } from "react-icons/fi";
 
 const BookCard = ({ book }) => {
-  const categoryColors = {
-    Story: "bg-chart-4/10 text-chart-4 border-chart-4/20",
-    Tech: "bg-chart-5/10 text-chart-5 border-chart-5/20",
-    Science: "bg-chart-3/10 text-chart-3 border-chart-3/20",
-  };
-
   return (
     <div className="bg-base-100 rounded-2xl overflow-hidden shadow hover:shadow-lg transition">
       {/* Image */}
