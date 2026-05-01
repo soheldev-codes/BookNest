@@ -1,7 +1,7 @@
 export const getBooks = async () => {
-    const res = await fetch("http://localhost:3000/booksdata.json")
-    const data = await res.json()
-    return data;
-} 
+  const res = await fetch("https://booknest-psi.vercel.app/booksdata.json");
+  const data = await res.json();
+  return data;
+};
 
-  export const bookData = await getBooks();
+export const bookData = await getBooks();

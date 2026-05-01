@@ -1,16 +1,9 @@
 import { FiBookOpen, FiLogIn, FiLogOut, FiUser } from "react-icons/fi";
 import Navlinks from "./Navlinks";
 import Link from "next/link";
-import { headers } from "next/headers";
-import { auth } from "@/lib/auth";
 import Logout from "./Logout";
 
 const Navbar = async () => {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
-  const user = session?.user;
-
   return (
     <div className="bg-base-100 shadow-sm sticky top-0 z-50">
       <div className="navbar container mx-auto ">
