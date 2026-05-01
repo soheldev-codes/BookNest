@@ -15,12 +15,7 @@ const Logout = () => {
     router.push("/");
   };
 
-  const {
-    data: session,
-    isPending, //loading state
-    error, //error object
-    refetch, //refetch the session
-  } = authClient.useSession();
+  const { data: session } = authClient.useSession();
 
   const user = session?.user;
 
