@@ -20,7 +20,7 @@ const Logout = () => {
   const user = session?.user;
 
   return (
-    <>
+    <div>
       {user ? (
         <>
           <div className="badge badge-soft py-4 px-4 text-black font-semibold mr-2">
@@ -35,7 +35,7 @@ const Logout = () => {
           <FiLogIn /> Login
         </Link>
       )}
-    </>
+    </div>
   );
 };
 

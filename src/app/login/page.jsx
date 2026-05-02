@@ -1,5 +1,6 @@
 "use client";
 
+import GoogleSignIn from "@/components/GoogleSignIn/GoogleSignIn";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useState } from "react";
@@ -19,19 +20,16 @@ export default function SignupPage() {
   const onSubmit = async (data) => {
     const email = data.email;
     const password = data.password;
-
-    console.log(data);
-
     const { data: res, error } = await authClient.signIn.email({
       email,
       password,
       callbackURL: "/",
     });
 
-    console.log(error);
-
     if (res) {
       toast.success("Welcome back!");
+    } else {
+      toast.error(error.message);
     }
   };
 
@@ -113,6 +111,8 @@ export default function SignupPage() {
               Sign up
             </Link>
           </p>
+
+          <GoogleSignIn />
         </div>
       </div>
     </div>

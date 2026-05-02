@@ -1,5 +1,6 @@
 "use client";
 
+import GoogleSignIn from "@/components/GoogleSignIn/GoogleSignIn";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useState } from "react";
@@ -27,17 +28,13 @@ export default function SignupPage() {
       password,
       name,
       image,
-      callbackURL: "/login",
+      callbackURL: "/",
     });
 
     if (res) {
       toast.success("Account created successfully 🎉");
-
-      await authClient.signOut();
-
-      toast.success("login now");
     } else {
-      toast.error(error);
+      toast.error(error.message);
     }
   };
 
@@ -161,6 +158,7 @@ export default function SignupPage() {
               Login
             </Link>
           </p>
+          <GoogleSignIn />
         </div>
       </div>
     </div>

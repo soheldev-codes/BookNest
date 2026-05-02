@@ -32,7 +32,7 @@ const Banner = () => {
               read at your pace, and discover stories that inspire.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/books">
+              <Link href="/all-books">
                 <button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 gap-2 group flex items-center py-2 font-semibold cursor-pointer ">
                   Browse Now
                   <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

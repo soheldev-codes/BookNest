@@ -49,35 +49,35 @@ export default function PopularCategories() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {categories.map((cat, i) => {
-            const Icon = cat.icon;
+          {categories.map((item, i) => {
+            const Icon = item.icon;
 
             return (
               <motion.div
-                key={cat.name}
+                key={item.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.4 }}
               >
                 <Link
-                  href={`/books?category=${cat.name}`}
-                  className={`group block rounded-2xl border ${cat.borderColor} p-8 hover:shadow-lg transition-all duration-300 bg-base-100`}
+                  href={`/books?category=${item.name}`}
+                  className={`group block rounded-2xl border ${item.borderColor} p-8 hover:shadow-lg transition-all duration-300 bg-base-100`}
                 >
                   {/* Icon */}
                   <div
-                    className={`w-14 h-14 rounded-xl ${cat.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}
+                    className={`w-14 h-14 rounded-xl ${item.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}
                   >
                     <Icon className="w-7 h-7" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold mb-2">{cat.name}</h3>
+                  <h3 className="text-xl font-bold mb-2">{item.name}</h3>
                   <p className="text-sm text-gray-500 mb-4">
-                    {cat.description}
+                    {item.description}
                   </p>
                   <span className="text-xs font-semibold text-primary">
-                    {cat.count}
+                    {item.count}
                   </span>
                 </Link>
               </motion.div>
